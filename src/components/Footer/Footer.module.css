@@ -1,0 +1,59 @@
+/* components/Footer/Footer.module.css */
+
+.footer {
+  background: var(--bg-tertiary);
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  padding: 2.5rem 0;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.copy {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+}
+
+.links a {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: var(--accent-light);
+}
+
+.backToTop {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.backToTop:hover {
+  color: var(--accent-light);
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,185 @@
+/* components/Projects/Projects.module.css */
+
+.projects {
+  background: var(--bg-secondary);
+  padding: 4rem 0 6rem;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  margin-top: -1.5rem;
+  margin-bottom: 3rem;
+  font-size: 1.05rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  align-items: stretch;
+}
+
+/* ========== CARD ========== */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  height: 220px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  border-color: var(--card-border-hover);
+  box-shadow: 0 8px 30px var(--accent-glow);
+  z-index: 10;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  height: 100%;
+}
+
+/* ========== HEADER ========== */
+.cardHeader h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem 0;
+}
+
+/* ========== TECHS ========== */
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.techTag {
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  padding: 0.2rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* ========== DETALHES ========== */
+.details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.5rem;
+  background: var(--details-bg);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.8rem;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  pointer-events: none;
+}
+
+.card:hover .details {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.details p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ========== LINKS ========== */
+.links {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.links a {
+  flex: 1;
+  text-align: center;
+  padding: 0.4rem 0.6rem;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.primaryLink {
+  background: var(--gradient-secondary);
+  color: var(--text-primary);
+  box-shadow: var(--btn-shadow);
+}
+
+.primaryLink:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--btn-shadow-hover);
+}
+
+.secondaryLink {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.secondaryLink:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--accent-light);
+  color: var(--accent-light);
+  transform: translateY(-2px);
+}
+
+/* ========== RESPONSIVO ========== */
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    padding: 0 1rem;
+    max-width: 400px;
+  }
+
+  .card {
+    height: 200px;
+    padding: 1rem;
+  }
+
+  .cardHeader h3 {
+    font-size: 1rem;
+  }
+
+  .techTag {
+    font-size: 0.65rem;
+  }
+
+  .details p {
+    font-size: 0.8rem;
+  }
+
+  .primaryLink,
+  .secondaryLink {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .links {
+    gap: 0.5rem;
+  }
+}

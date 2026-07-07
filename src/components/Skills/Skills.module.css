@@ -1,0 +1,62 @@
+/* components/Skills/Skills.module.css */
+
+.skills {
+  background: var(--bg-secondary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.skillCard {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.skillCard:hover {
+  transform: translateY(-6px);
+  border-color: var(--card-border-hover);
+  box-shadow: 0 8px 30px var(--accent-glow);
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin: 0 auto 0.5rem;
+  object-fit: contain;
+}
+
+.name {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1rem;
+  }
+
+  .skillCard {
+    padding: 1rem 0.5rem;
+  }
+
+  .icon {
+    font-size: 2rem;
+  }
+
+  .name {
+    font-size: 0.8rem;
+  }
+}
