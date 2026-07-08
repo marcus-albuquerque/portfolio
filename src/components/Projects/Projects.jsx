@@ -41,6 +41,14 @@ const projects = [
     tech: ['HTML', 'CSS', 'JavaScript'],
     link: 'https://marcus-albuquerque.github.io/AT1',
     repo: 'https://github.com/marcus-albuquerque/AT1'
+  },
+  {
+    id: 6,
+    title: 'Tutor IA - Chatbot Educacional',
+    description: 'Chat bot educacional que utiliza inteligência artificial para fornecer ajuda aos estudantes. Desenvolvido em PHP.',
+    tech: ['PHP', 'HTML', 'CSS', 'JavaScript'],
+    link: 'https://marcus-albuquerque.github.io/AT1',
+    repo: 'https://github.com/marcus-albuquerque/AT1'
   }
 ]
 
